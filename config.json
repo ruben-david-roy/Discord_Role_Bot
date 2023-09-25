@@ -1,5 +1,5 @@
 {
-    "ROLE_ID": Enter_Role_ID_of_Admin_Role,
-    "CHANNEL_ID": Enter_Channel_ID_of_Announcement_Message,
+    "ROLE_ID": 1,
+    "CHANNEL_ID": 1,
     "PREFIX": "Enter_Bot_Prefix"
 }
