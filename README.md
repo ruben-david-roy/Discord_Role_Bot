@@ -7,7 +7,6 @@ Discord Role Bot is a Discord bot that facilitates promoting and demoting users 
 - [Installation](#installation)
 - [Configuration](#configuration)
 - [Bot Usage](#bot-usage)
-- [Contributing](#contributing)
 - [License](#license)
 
 ## Installation
