@@ -30,12 +30,10 @@ bot = commands.Bot(command_prefix=PREFIX, intents=intents)
 # set up a Flask application
 app = Flask(__name__)
 
-
 # flask route for checking bot status
 @app.route('/')
 def index():
     return "Bot Online! ✅"
-
 
 # event to print bot details and set its status when it's ready
 @bot.event
@@ -45,11 +43,9 @@ async def on_ready():
                                 name="after the server")
     await bot.change_presence(activity=activity)
 
-
 # check if the message is sent by a specific author in a specific channel
 def check_user_dm(m, dm_channel, author):
     return m.channel == dm_channel and m.author == author
-
 
 # utility function to get user and role details via DM
 async def get_user_and_role(ctx, prompt):
@@ -80,7 +76,6 @@ async def get_user_and_role(ctx, prompt):
 
     return user, role
 
-
 # bot command to promote a user to a specific role
 @bot.command()
 async def promote(ctx):
@@ -105,7 +100,6 @@ async def promote(ctx):
         await ctx.send("You do not have the required role to use this command."
                        )
 
-
 # bot command to demote a user from a specific role
 @bot.command()
 async def demote(ctx):
@@ -128,7 +122,6 @@ async def demote(ctx):
     else:
         await ctx.send("You do not have the required role to use this command."
                        )
-
 
 # main execution: run bot and flask server concurrently
 if __name__ == '__main__':
